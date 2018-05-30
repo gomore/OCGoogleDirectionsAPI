@@ -186,7 +186,7 @@ static NSString *const kOCGoogleDirectionsRequestAttributeValueDepartureTimeNow 
     for (NSString *restriction in request.restrictions) {
         [string appendString:[self encodeParameter:restriction]];
 
-        if (++iter < count) {
+        if (![restriction isEqualToString:request.restrictions.lastObject]) {
             [string appendString:[self encodeParameter:kOCGoogleDirectionsRequestAttributeSeparator]];
         }
     }
