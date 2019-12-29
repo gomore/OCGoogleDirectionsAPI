@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
   s.requires_arc = true
 
-  s.source_files = 'Source/OCGoogleDirectionsAPI/**/*.{h,m}'
-  s.public_header_files = 'Source/OCGoogleDirectionsAPI/**/*.h'
+  s.source_files = 'Sources/OCGoogleDirectionsAPI/**/*.{h,m}'
+  s.public_header_files = 'Sources/OCGoogleDirectionsAPI/**/*.h'
 
   s.frameworks = 'CoreLocation'
 end

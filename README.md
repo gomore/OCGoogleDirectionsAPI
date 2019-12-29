@@ -74,10 +74,6 @@ Some init methods of `OCDirectionsAPIClient`:
 	- (instancetype)initWithKey:(NSString *)key useHttps:(BOOL)https;
    ```
 
-<b>Sequence diagram</b>
-
-![Sequence diagram](https://raw.github.com/marciniwanicki/OCGoogleDirectionsAPI/master/UML/GetDirectionsSequenceDiagram.png)
-
 That's all! It's quite easy, isn't it? If you like to know a bit more about requests please read the next section [OCDirectionsRequest](#ocdirectionsrequest).
 
 ## OCDirectionsRequest
