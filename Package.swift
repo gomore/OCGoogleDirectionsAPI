@@ -21,7 +21,7 @@ let package = Package(
         .target(
             name: "OCGoogleDirectionsAPI",
             dependencies: [],
-            publicHeadersPath: "OCGoogleDirectionsAPI/OCGoogleDirectionsAPI.h"),
+            publicHeadersPath: "."),
         .testTarget(
             name: "OCGoogleDirectionsAPITests",
             dependencies: ["OCGoogleDirectionsAPI"]),
