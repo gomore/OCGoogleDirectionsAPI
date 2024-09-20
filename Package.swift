@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -21,9 +21,18 @@ let package = Package(
         .target(
             name: "OCGoogleDirectionsAPI",
             dependencies: [],
-            publicHeadersPath: "."),
+            publicHeadersPath: ".",
+            swiftSettings: .completeConcurrencyChecking),
         .testTarget(
             name: "OCGoogleDirectionsAPITests",
             dependencies: ["OCGoogleDirectionsAPI"]),
     ]
 )
+
+extension Array where Element == SwiftSetting {
+    static let completeConcurrencyChecking: Self = [.completeConcurrencyChecking]
+}
+
+extension SwiftSetting {
+    static let completeConcurrencyChecking = Self.unsafeFlags(["-strict-concurrency=complete"])
+}

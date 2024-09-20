@@ -12,7 +12,7 @@
 #import "RequestURLCreator/OCDirectionsRequestURLCreator.h"
 #import "RequestURLCreator/OCDirectionsRequestURLCreatorJSON.h"
 
-typedef void (^OCDirectionsRequestCallback)(OCDirectionsResponse *response, NSError *error);
+typedef NS_SWIFT_UI_ACTOR NS_SWIFT_SENDABLE void (^OCDirectionsRequestCallback)(OCDirectionsResponse *response, NSError *error);
 
 @interface OCDirectionsAPIClient : NSObject
 
