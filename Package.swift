@@ -21,18 +21,9 @@ let package = Package(
         .target(
             name: "OCGoogleDirectionsAPI",
             dependencies: [],
-            publicHeadersPath: ".",
-            swiftSettings: .completeConcurrencyChecking),
+            publicHeadersPath: "."),
         .testTarget(
             name: "OCGoogleDirectionsAPITests",
             dependencies: ["OCGoogleDirectionsAPI"]),
     ]
 )
-
-extension Array where Element == SwiftSetting {
-    static let completeConcurrencyChecking: Self = [.completeConcurrencyChecking]
-}
-
-extension SwiftSetting {
-    static let completeConcurrencyChecking = Self.unsafeFlags(["-strict-concurrency=complete"])
-}
